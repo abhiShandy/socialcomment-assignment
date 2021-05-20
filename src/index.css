@@ -1,11 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 :root {
 	--pink: rgb(215,124,167);
 }
+
 body {
 	background-color: rgb(43,46,53);
 	border-radius: 10px;
 	color: white;
-	font-family: var(--bs-font-sans-serif), Arial, Verdana, Helvetica;
+	font-family: var(--bs-font-sans-serif);
 }
 aside.col-lg-3 {
 	padding: 3em;

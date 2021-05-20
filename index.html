@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <title>SocialComment</title>
+  </head>
+  <body>
+  	<div class="container-fluid">
+  		<div class="row">
+  			<aside class="col-lg-3">
+  				<button class="btn btn-light" id="logo">B</button>
+  				<div id="user-profile" class="row my-5">
+  					<img src="img1.jpg" alt="img1" class="col-lg-3 img-fluid">
+  					<div class="col-lg-9">
+  						<p>Anand Agarwal</p>
+  						<a href="mailto:anand.a@bk.com">anand.a@bk.com</a>
+  					</div>
+  				</div>
+  				<nav id="side-nav">
+  					<div class="row my-4">
+  						<a href="#" class="active">Motivation</a>
+  					</div>
+  					<div class="row my-4">
+  						<a href="#">Productivity</a>
+  						<!-- <button class="btn btn-primary">New Added</button> -->
+  					</div>
+  					<div class="row my-4">
+  						<a href="#">Design</a>
+  					</div>
+  					<div class="row my-4">
+  						<a href="#">Study</a>
+  					</div>
+  				</nav>
+  				<div class="card" id="pro-card">
+  					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" class="svg-inline--fa fa-rocket fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"></path></svg>
+  					<div class="card-body">
+	  					<div class="card-text">Pro Account is more powerful. Get 30% off.</div>
+	  					<a class="btn btn-primary" href="#">Get Pro</a>
+  					</div>
+  				</div>
+  				<div class="row my-4">
+  					<a id="logout" href="#">Logout</a>
+  				</div>
+  			</aside>
+  			<main class="col-lg-9 mt-4" id="main">
+  				<div class="row">
+  					<h1 id="title" class="col-lg-6">Motivation</h1>
+  					<div class="col-lg-6" id="shared-users">
+  						<img src="img2.jpg" class="img-fluid">
+  						<img src="img3.jpg" class="img-fluid">
+  						<img src="img4.jpg" class="img-fluid">
+  						<img src="img5.jpg" class="img-fluid">
+  						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" id="add-shared-user">
+						  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+						</svg>
+  					</div>
+  				</div>
+  				<nav id="top-nav">
+  					<a href="#" class="active">All</a>
+  					<a href="#">Articles</a>
+  					<a href="#">Podcast</a>
+  					<a href="#">Video</a>
+  					<a href="#">Downloads</a>
+  					<button class="btn btn-primary">Play All</button>
+  				</nav>
+  				<div id="content">
+	  				<div id="green">
+	  					<p>Your<br> limitation<br> is only<br> your<br> imagination.</p>
+	  					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play-circle" class="svg-inline--fa fa-play-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>
+	  				</div>
+	  				<div id="blue">
+	  					<p>Great things<br> never come from<br> comfort zones.</p>
+	  					<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play-circle" class="svg-inline--fa fa-play-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>
+	  				</div>
+	  				<div id="pink">
+	  					<p>Dream it.<br> Wish it.<br> Do it.</p>
+	  				</div>
+	  				<div id="gray">
+	  					<p>Stay<br> Focused.</p>
+	  					<button class="btn btn-light">Read Article</button>
+	  				</div>
+	  			</div>
+  			</main>
+  			<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16" id="add-button">
+	 			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+			</svg>
+  		</div>
+  	</div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,29 +1,48 @@
+:root {
+	--pink: rgb(215,124,167);
+}
 body {
 	background-color: rgb(43,46,53);
 	border-radius: 10px;
 	color: white;
-	/*font-family: --bs-font-sans-serif, Arial, Verdana, Helvetica;*/
+	font-family: var(--bs-font-sans-serif), Arial, Verdana, Helvetica;
 }
 aside.col-lg-3 {
-	padding: 0 2em;
+	padding: 3em;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 4fr 4fr 3fr 2fr;
+}
+#logout {
+	padding-top: 3em;
+	/*padding-bottom: 3em;*/
 }
 
 #logo {
-	margin: 50px 10px 50px 0px;
 	border-radius: 10px 0px 10px 0px;
-	font-size: 25px;
+	font-size: 2em;
 	font-weight: bold;
+	width: 2em;
+	height: 2em;
+	padding-bottom: 1em;
+}
+
+#user-profile {
+	padding-top: 3em;
+	padding-bottom: 1em;
 }
 
 #user-profile img {
 	border-radius: 50%;
+	padding: 0;
 }
 
 #user-profile p {
 	margin-bottom: 0;
 	margin-top: 10px;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1.4em;
 }
 
 #user-profile a {
@@ -34,12 +53,16 @@ aside.col-lg-3 {
 #user-profile a:hover {
 	text-decoration: underline;
 }
+#user-profile .col-lg-3 {
+	padding: 0;
+}
 
 #side-nav a,
 #logout {
 	text-decoration: none;
 	color: darkgray;
 	font-weight: bold;
+	padding-left: 0;
 }
 #side-nav a.active {
 	color: white;
@@ -54,13 +77,13 @@ aside.col-lg-3 {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	margin-top: 7em;
+	/*margin-top: 6em;*/
 }
 #pro-card svg {
 	height: 50px;
 	width: auto;
 	margin: 1em 0 auto 1em;
-	color: rgb(215,124,167);
+	color: var(--pink);
 }
 #pro-card a {
 	margin-top: 1em;
@@ -101,7 +124,7 @@ main#main {
 	z-index: 0
 }
 #add-shared-user {
-	color: rgb(215,124,167);
+	color: var(--pink);
 	height: 50px;
 	width: 50px;
 	position: absolute;
@@ -119,7 +142,7 @@ main#main {
 }
 #top-nav a:hover,
 #top-nav a.active {
-	border-bottom: 2px solid rgb(215,124,167);
+	border-bottom: 2px solid var(--pink);
 }
 
 
@@ -143,9 +166,9 @@ main#main {
 #green svg,
 #blue svg {
 	width: 65px;
-	background-color: rgb(215,124,167);
+	background-color: var(--pink);
 	border-radius: 50%;
-	border: 0px solid rgb(215,124,167);
+	border: 0px solid var(--pink);
 }
 #blue {
 	background-color: rgb(47,55,120);
@@ -153,7 +176,7 @@ main#main {
 	position: relative;
 }
 #pink {
-	background-color: rgb(215,124,167);
+	background-color: var(--pink);
 	grid-column: 3/4;
 }
 #blue p,
@@ -172,6 +195,7 @@ main#main {
 #gray button {
 	margin: 20px;
 	width: 150px;
+	color: rgb(127,132,132);
 }
 #content {
 	display: grid;
@@ -194,15 +218,16 @@ h1#title {
 	font-weight: bolder;
 }
 .btn-primary,
+.btn-primary:focus,
 .btn-primary:hover {
-	background-color: rgb(215,124,167);
-	border-color: rgb(215,124,167);
+	background-color: var(--pink);
+	border-color: var(--pink);
 }
 #add-button {
 	position: absolute;
 	bottom: 18px;
 	width: 65px;
-	color: rgb(215,124,167);
+	color: var(--pink);
 	background-color: white;
 	left: 23%;
 	padding: 0;

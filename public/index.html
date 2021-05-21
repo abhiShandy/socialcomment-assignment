@@ -64,12 +64,33 @@
               <h1 id="title">Motivation</h1>
             </div>
             <div class="col-sm-3 d-sm-block d-md-none d-lg-none" id="user-button-div">
-              <button id="user-button" class="btn btn-default">
+              <button id="user-button" class="btn btn-default" data-bs-toggle="collapse" data-bs-target="#collapseMenu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>
               </button>
+            </div>
+            <div class="collapse" id="collapseMenu">
+              <div id="shared-users-collapse">
+                <img src="img2.jpg" class="img-fluid">
+                <img src="img3.jpg" class="img-fluid">
+                <img src="img4.jpg" class="img-fluid">
+                <img src="img5.jpg" class="img-fluid">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" id="add-shared-user">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </div>
+              <nav id="side-nav-collapse">
+                <a href="#" class="active">Motivation</a>
+                <a href="#">
+                  Productivity
+                  <span class="badge">New Added</span>
+                </a>
+                <a href="#">Design</a>
+                <a href="#">Study</a>
+              </nav>
             </div>
 
             <div class="col-lg-6 col-md-4 col-sm-2 d-sm-none d-md-inline" id="shared-users">
@@ -78,9 +99,9 @@
               <img src="img4.jpg" class="img-fluid">
               <img src="img5.jpg" class="img-fluid">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" id="add-shared-user">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-            </svg>
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+              </svg>
             </div>
           </div>
           <nav id="top-nav">

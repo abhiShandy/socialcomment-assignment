@@ -15,10 +15,11 @@ code {
 :root {
 	--pink: rgb(215,124,167);
 	--darkgray: rgb(37,40,45);
+	--lightgray: rgb(43,46,53);
 }
 
 body {
-	background-color: rgb(43,46,53);
+	background-color: var(--lightgray);
 	border-radius: 10px;
 	color: white;
 	font-family: var(--bs-font-sans-serif);
@@ -73,29 +74,32 @@ aside#sidebar {
 	font-size: .8em;
 	display: none;
 }
+#user-profile a:hover {
+	text-decoration: underline;
+}
 @media (min-width: 1200px) {
 	#user-profile p {
 		display: initial;
-	}
-	#user-profle a {
-		display: inline;
-	}
-}
-@media (min-width: 1200px) {
-	#user-profile p {
 		font-size: 1.4em;
 	}
-	#user-profile a {
+	#user-profle a {
+		display: initial;
 		font-size: 1.2em;
 	}
-}
-#user-profile a:hover {
-	text-decoration: underline;
 }
 #user-profile .col-lg-3 {
 	padding: 0;
 }
 /* =============== Side nav =============== */
+#side-nav-collapse{
+	display: flex;
+	flex-direction: column;
+}
+.collapse {
+	padding-top: 10px;
+	background-color: var(--lightgray);
+}
+#side-nav-collapse a,
 #side-nav a {
 	text-decoration: none;
 	color: darkgray;
@@ -137,6 +141,11 @@ a#logout {
 	margin: 1em 0 auto 1em;
 	color: var(--pink);
 	display: none;
+}
+@media (min-width: 1200px) {
+	#pro-card svg {
+		display: initial;
+	}
 }
 #pro-card button {
 	margin-top: 1em;
@@ -180,6 +189,30 @@ main#main {
 }
 #shared-users {
 	display: none;
+}
+
+#shared-users-collapse img {
+	border-radius: 50%;
+	position: relative;
+	float: right;
+	height: 60px;
+	border: 5px solid var(--lightgray);
+}
+#shared-users-collapse img:nth-child(1) {
+	right: 70px;
+	z-index: 1;
+}
+#shared-users-collapse img:nth-child(2) {
+	right: 35px;
+	z-index: 2;
+}
+#shared-users-collapse img:nth-child(3) {
+	/*left: 60px;*/
+	z-index: 3;
+}
+#shared-users-collapse img:nth-child(4) {
+	left: 35px;
+	z-index: 4;
 }
 #shared-users img {
 	border-radius: 50%;
@@ -375,6 +408,7 @@ h1#title {
 }
 #title-div {
 	width: 80%;
+	padding: 1em;
 }
 @media (min-width: 576px) {
 	#title-div {
@@ -389,6 +423,7 @@ h1#title {
 @media (min-width: 1200px) {
 	#title-div {
 		width: 50%;
+		padding: initial;
 	}
 }
 /* =========== Buttons =========== */

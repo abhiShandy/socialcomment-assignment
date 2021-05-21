@@ -14,6 +14,7 @@ code {
 
 :root {
 	--pink: rgb(215,124,167);
+	--darkgray: rgb(37,40,45);
 }
 
 body {
@@ -25,9 +26,14 @@ body {
 aside#sidebar {
 	padding: 24px;
 	height: 100vh;
-	display: grid;
+	display: none;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 4fr 4fr 3fr 2fr;
+}
+@media (min-width: 1200px) {
+	aside#sidebar {
+		display: grid;
+	}
 }
 @media (min-width: 1200px) {
 	aside#sidebar {
@@ -59,12 +65,21 @@ aside#sidebar {
 	margin-top: 10px;
 	font-weight: bold;
 	font-size: 1em;
+	display: none
 }
 #user-profile a {
 	text-decoration: none;
 	color: white;
-	display: inline;
 	font-size: .8em;
+	display: none;
+}
+@media (min-width: 1200px) {
+	#user-profile p {
+		display: initial;
+	}
+	#user-profle a {
+		display: inline;
+	}
 }
 @media (min-width: 1200px) {
 	#user-profile p {
@@ -99,7 +114,17 @@ a#logout {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	margin-top: 5em;
+	margin-top: 3em;
+}
+@media (min-width: 576px) {
+	#pro-card {
+		margin-top: 4em;
+	}
+}
+@media (min-width: 768px) {
+	#pro-card {
+		margin-top: 5em;
+	}
 }
 @media (min-width: 1200px) {
 	#pro-card {
@@ -111,14 +136,24 @@ a#logout {
 	width: auto;
 	margin: 1em 0 auto 1em;
 	color: var(--pink);
+	display: none;
 }
 #pro-card button {
 	margin-top: 1em;
 }
+#pro-card .card-body p{
+	display: none;
+}
+@media (min-width: 1200px) {
+	#pro-card .svg,
+	#pro-card .card-body p{
+		display: initial;
+	}
+}
 
 /* =========== Main content ============== */
 main#main {
-	background-color: rgb(37,40,45);
+	background-color: var(--darkgray);
 	border-radius: 50px;
 	height: 95vh;
 	display: grid;
@@ -138,9 +173,17 @@ main#main {
 	}
 }
 /* ======= Shared users =========== */
+@media (min-width: 576px) {
+	#shared-users {
+		display: block;
+	}
+}
+#shared-users {
+	display: none;
+}
 #shared-users img {
 	border-radius: 50%;
-	border: 5px solid rgb(37,40,45);
+	border: 5px solid var(--darkgray);
 	position: absolute;
 	height: 60px;
 	width: auto;
@@ -171,27 +214,44 @@ main#main {
 	margin-top: 5px;
 }
 /* ========= Top navigation menu ========== */
-#top-nav {
-	margin-left: -20px;
-}
 #top-nav a {
 	text-decoration: none;
 	color: lightgray;
-	margin: 0px 20px; 
+	margin: 0px 10px; 
 	font-weight: bold;
+}
+@media (min-width: 768px) {
+	#top-nav {
+		margin-left: -20px;
+	}
+	#top-nav a {
+		margin: 0px 15px; 
+	}
+}
+@media (min-width: 1200px) {
+	#top-nav a {
+		margin: 0px 20px; 
+	}
 }
 #top-nav a:hover,
 #top-nav a.active {
 	border-bottom: 2px solid var(--pink);
 }
+.dropdown {
+	display: inline;
+}
+#dropdownButton {
+	color: white;
+}
+.dropdown-menu {
+	background-color: var(--darkgray);
+}
+.dropdown-menu li:nth-child(3) {
+	padding: 0 20px;
+}
 
 /* =========== Grid elements ============ */
 #content {
-	display: grid;
-	grid-template-columns: 4fr 3fr 3fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 20px;
-
 	position: relative;
 	overflow: scroll;
 	margin-top: 20px;
@@ -202,14 +262,59 @@ main#main {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	margin-bottom: 20px;
+}
+@media (min-width: 576px) {
+	#content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 20px;
+	}
+	#content div {
+		margin-bottom: initial;
+	}
+}
+@media (min-width: 768px) {
+	#content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 10px;
+	}
+}
+@media (min-width: 1200px) {
+	#content {
+		display: grid;
+		grid-template-columns: 4fr 3fr 3fr;
+		grid-template-rows: 1fr 1fr;
+		grid-gap: 20px;
+	}
+	#content div {
+		margin-bottom: initial;
+	}
+	#green {
+		grid-row: 1/3;
+	}
+	#green p {
+		font-size: 36px;
+	}
+	#blue {
+		grid-column: 2/3;
+	}
+	#pink {
+		grid-column: 3/4;
+	}
+	#gray {
+		grid-column: 2/4;
+	}
 }
 #green {
 	background-color: rgb(47,65,53);
-	grid-row: 1/3;
 }
 #green p{
 	margin: 20px;
-	font-size: 36px;
+	font-size: 24px;
 }
 #green svg {
 	margin: 20px;
@@ -230,17 +335,21 @@ main#main {
 @media (min-width: 768px) {
 	#green svg,
 	#blue svg {
+		width: 55px;
+	}
+}
+@media (min-width: 1200px) {
+	#green svg,
+	#blue svg {
 		width: 65px;
 	}
 }
 #blue {
 	background-color: rgb(47,55,120);
-	grid-column: 2/3;
 	position: relative;
 }
 #pink {
 	background-color: var(--pink);
-	grid-column: 3/4;
 }
 #blue p,
 #pink p {
@@ -249,7 +358,6 @@ main#main {
 }
 #gray {
 	background-color: rgb(127,132,132);
-	grid-column: 2/4;
 }
 #gray p {
 	margin: 20px;
@@ -260,9 +368,28 @@ main#main {
 	width: 150px;
 	color: rgb(127,132,132);
 }
+
 /* =========== Header =========== */
 h1#title {
 	font-weight: bolder;
+}
+#title-div {
+	width: 80%;
+}
+@media (min-width: 576px) {
+	#title-div {
+		width: 70%;
+	}
+}
+@media (min-width: 768px) {
+	#title-div {
+		width: 50%;
+	}
+}
+@media (min-width: 1200px) {
+	#title-div {
+		width: 50%;
+	}
 }
 /* =========== Buttons =========== */
 .btn-primary,
@@ -271,7 +398,11 @@ h1#title {
 	background-color: var(--pink);
 	border-color: var(--pink);
 }
+.btn:focus {
+	box-shadow: none;
+}
 #add-button {
+	display: none;
 	position: absolute;
 	bottom: 18px;
 	width: 65px;
@@ -281,13 +412,42 @@ h1#title {
 	padding: 0;
 	border-radius: 50%;
 }
+@media (min-width: 576px) {
+	#add-button {
+		display: block;
+	}
+}
+
 #user-button {
 	color: white;
+	float: right;
+	width: auto;
+	padding: 0;
+}
+#user-button-div {
+	width: 20%;
+}
+@media (min-width: 576px) {
+	#user-button-div {
+		width: 30%;
+	}
 }
 /* ==== Badge ======= */
 .badge {
 	background-color: var(--pink);
 	float: right;
+	display: none;
+	font-size: 10px;
+}
+@media (min-width: 768px) {
+	.badge {
+		display: inline;
+	}
+}
+@media (min-width: 1200px) {
+	.badge {
+		display: initial;
+	}
 }
 /* ======== Hide elements =========== */
 /*@media (min-width: 576px) {

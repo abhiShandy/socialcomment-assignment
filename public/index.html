@@ -34,46 +34,41 @@
     <div id="root"></div>
     <div class="container-fluid">
       <div class="row">
-        <aside class="col-lg-3">
+        <aside id="sidebar" class="col-md-3 d-sm-none d-md-block">
           <div class="row">
             <button class="btn btn-light" id="logo">B</button>
           </div>
           <div id="user-profile">
           </div>
           <nav id="side-nav" class="row">
-            <div class="row">
-              <a href="#" class="active">Motivation</a>
-            </div>
-            <div class="row">
-              <a href="#">
-                Productivity
-                <span class="badge">New Added</span>
-              </a>
-            </div>
-            <div class="row">
-              <a href="#">Design</a>
-            </div>
-            <div class="row">
-              <a href="#">Study</a>
-            </div>
-          </nav>
-          <div class="row pt-5">
+            <a href="#" class="active">Motivation</a>
+            <a href="#">
+              Productivity
+              <span class="badge">New Added</span>
+            </a>
+            <a href="#">Design</a>
+            <a href="#">Study</a>
             <div class="card" id="pro-card">
               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rocket" class="svg-inline--fa fa-rocket fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505.12019,19.09375c-1.18945-5.53125-6.65819-11-12.207-12.1875C460.716,0,435.507,0,410.40747,0,307.17523,0,245.26909,55.20312,199.05238,128H94.83772c-16.34763.01562-35.55658,11.875-42.88664,26.48438L2.51562,253.29688A28.4,28.4,0,0,0,0,264a24.00867,24.00867,0,0,0,24.00582,24H127.81618l-22.47457,22.46875c-11.36521,11.36133-12.99607,32.25781,0,45.25L156.24582,406.625c11.15623,11.1875,32.15619,13.15625,45.27726,0l22.47457-22.46875V488a24.00867,24.00867,0,0,0,24.00581,24,28.55934,28.55934,0,0,0,10.707-2.51562l98.72834-49.39063c14.62888-7.29687,26.50776-26.5,26.50776-42.85937V312.79688c72.59753-46.3125,128.03493-108.40626,128.03493-211.09376C512.07526,76.5,512.07526,51.29688,505.12019,19.09375ZM384.04033,168A40,40,0,1,1,424.05,128,40.02322,40.02322,0,0,1,384.04033,168Z"></path></svg>
               <div class="card-body">
                 <div class="card-text">Pro Account is more powerful. Get 30% off.</div>
-                <a class="btn btn-primary" href="#">Get Pro</a>
+                <button class="btn btn-primary">Get Pro</button>
               </div>
             </div>
-          </div>
-          <div class="row">
             <a id="logout" href="#">Logout</a>
-          </div>
+          </nav>
         </aside>
-        <main class="col-lg-9 mt-4" id="main">
+        <main class="col-md-9 col-sm-12" id="main">
           <div class="row">
-            <h1 id="title" class="col-lg-6">Motivation</h1>
-            <div class="col-lg-6" id="shared-users">
+            <h1 id="title" class="col-lg-6 col-sm-11">Motivation</h1>
+            <button id="user-button" class="btn btn-default col-sm-1 d-sm-block d-md-none d-lg-none d-sm-block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+            </button>
+
+            <div class="col-lg-6  d-sm-none d-md-block" id="shared-users">
               <img src="img2.jpg" class="img-fluid">
               <img src="img3.jpg" class="img-fluid">
               <img src="img4.jpg" class="img-fluid">
@@ -110,7 +105,7 @@
             </div>
           </div>
         </main>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16" id="add-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle-fill  d-sm-none d-md-block" viewBox="0 0 16 16" id="add-button">
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
       </svg>
       </div>

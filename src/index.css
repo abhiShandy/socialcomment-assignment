@@ -56,24 +56,32 @@ aside#sidebar {
 	padding-bottom: 1em;
 }
 
+#user-profile-collapse img,
 #user-profile img {
 	border-radius: 50%;
 	padding: 0;
 }
 
+#user-profile-collapse p,
 #user-profile p {
 	margin-bottom: 0;
 	margin-top: 10px;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 16px;
+}
+#user-profile p {
 	display: none;
 }
+#user-profile-collapse a,
 #user-profile a {
 	text-decoration: none;
 	color: white;
 	font-size: 16px;
+}
+#user-profile a {
 	display: none;
 }
+#user-profile-collapse a:hover,
 #user-profile a:hover {
 	text-decoration: underline;
 }
@@ -101,6 +109,22 @@ aside#sidebar {
 }
 #user-profile .col-lg-3 {
 	padding: 0;
+}
+#user-profile-collapse p {
+	margin-top: 0;
+}
+#user-profile-collapse {
+	padding: 5px 0;
+	margin-bottom: 5px;
+	/*border-bottom: 1px solid #666;*/
+	/*background-color: #666;*/
+	border-radius: 10px;
+}
+#user-profile-collapse .img-div{
+	width: 20%;
+}
+#user-profile-collapse .name-div{
+	width: 40%;
 }
 /* =============== Side nav =============== */
 #side-nav-collapse{
